@@ -1,0 +1,257 @@
+*{
+    box-sizing: border-box;
+    font-family:tahoma;
+    color:rgb(61, 61, 61);
+    margin:0;
+    padding: 0
+}
+
+#Navwrapper{
+    width:100%;
+    background-color:white;
+    box-shadow: 0 0 0 1px rgb(245, 245, 245);
+}
+#Navbar{
+    display: grid;
+    grid-template-columns: 0.2fr auto 1fr; 
+    align-items: center;
+    height:80px;
+    width:90%;
+    max-width: 1720px;
+    margin:0 auto;
+}
+#nav-logo{
+    justify-self: start;
+    margin-left: 20px;
+}
+.nav-menu{
+    display: grid;
+    grid-template-columns:repeat(6, auto);
+    list-style: none;
+    text-align: center;
+    width: 75%;
+    justify-self: end
+}
+.nav-links{
+    text-decoration: none;
+}
+.nav-links-signup{
+    background-color:turquoise;
+    padding:6px 16px;
+    border-radius:15px
+}
+.nav-links-login{
+    border: 2px solid turquoise;
+    padding:6px 16px;
+    border-radius:15px
+}
+.toggle-bttn{
+    width: 25px;
+    height:3px;
+    margin:5px auto;
+    background-color:black;
+    transition: all 0.3s ease-in-out;
+}
+/*
+    shopracks body style
+*/
+#content-wrapper #infor-div{
+    width: 100%;
+    margin: 100px auto;
+    display: flex;
+    position: relative;
+}
+#content-wrapper #infor-div #infor-text{
+    width: 40%;
+    margin: 10px 50px;
+    font-size: 18px;
+    padding: 0 30px;
+    text-align: left
+}
+#infor-text .bold-Infor-text{
+    font-size: 45px;
+    font-weight: bold
+}
+.getStarted{
+   background-color: turquoise;
+   padding: 10px; 
+   color:white;
+   border: none;
+   border-radius: 18px;
+   text-align: left
+}
+#semi{
+    width: 140px;
+    height: 300px;
+    position: absolute;
+    padding-left: 0 5px;
+    right:0;
+    background-color: turquoise;
+    border-top-left-radius: 150px;
+    border-top-right-radius:0;
+    border-bottom-left-radius: 150px;
+    top:13%;
+}
+#infor-image{
+    margin-right: 10px;
+}
+#ShopRacks-Services{
+    margin: 80px 50px;
+    text-align: center;
+    min-height: 200px;
+    color:rgb(61, 61, 61);
+}
+#ShopRacks-Services h2{
+    font-size:40px;
+    font-weight: bold;
+}
+hr{
+    width:80px;
+    margin: 30px auto;
+    border-radius: 16px;
+    border-bottom: 4px solid rgb(165, 165, 165)   
+}
+#shopRacks-Card-Div{
+    width: 100%;
+    position: relative;
+}
+#ShopRacks-Services p{
+    width: 90%;
+    margin: 30px auto;
+    z-index: 1
+}
+#cards-area{
+    width: 80%;
+    display:flex;
+    flex-wrap:wrap;
+    margin: 0 auto;
+    align-items:center;
+}
+#shopRacks-Card-Div #circle{
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    left:-2%;
+    background-color: turquoise;
+    border-top-left-radius: 0;
+    border-top-right-radius:100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 0;
+    top:-5%;
+    z-index: 0
+}
+#cards-area .cards{
+    margin:20px auto;
+    width: 320px;
+    padding: 5px 40px;
+    text-align: left;
+    min-height: 400px;
+    border-radius: 18px;
+    box-shadow: 0 5px 12px rgb(197, 197, 197);
+    background-color:white;
+}
+#cards-area .cards img{
+    margin: 10% auto
+}
+#cards-area .cards h5{
+    font-size: 20px;
+    font-weight: bold
+}
+#cards-button{
+    padding: 6px 8px;
+    background-color: turquoise;
+    margin: 4px auto;
+    color: white;
+    font-weight: bold
+}
+@media screen and (max-width: 768px){
+    #Navwrapper{
+        position: relative;
+    }
+    .nav-menu{
+        display:grid;
+        grid-template-columns: auto; 
+        background-color: turquoise;
+        margin:0;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+    #nav-logo{
+        margin-left: 20px;
+        width:100%;
+    }
+    .nav-menu.active{
+        background: turquoise;
+        left:0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+    .nav-links, .nav-links-login,.nav-links-signup{
+        text-align: center;
+        line-height: 60px;
+        width: 100%;
+        display: table;
+        background-color:transparent;
+        border:none
+    }
+    #Navbar{
+        width:100%
+    }
+    #side-bar{
+        position: absolute;
+        top: 30%;
+        right: 15%;
+    }
+    .nav-menu{
+        display: block;
+    }
+    #side-bar .toggle-bttn{
+        display:block;
+
+    }
+    #side-bar.is-active .toggle-bttn:nth-child(2){
+        opacity: 0;
+    }
+    /*
+    media query for first div
+    */
+    #content-wrapper #infor-div{
+        width: 90%;
+        position: relative;
+        display:flex;
+        flex-direction: column;
+        margin: 30px auto;
+    }
+    #content-wrapper #infor-div #infor-text{
+        width: 90%;
+        text-align: left;
+        margin: 60px auto;
+        font-size: 16px;
+    }
+    .getStarted{
+        background-color: turquoise;
+        padding: 10px; 
+        color:white;
+        border: none;
+        border-radius: 18px;
+    }
+    #semi{
+        width: 50px;
+        height: 100px;
+        position: absolute;
+        right:0;
+        background-color: turquoise;
+        border-top-left-radius: 50px;
+        border-top-right-radius:0;
+        border-bottom-left-radius: 50px;
+        top:13%;
+    }
+    #infor-text .bold-Infor-text{
+        font-size: 30px;
+    }
+}
